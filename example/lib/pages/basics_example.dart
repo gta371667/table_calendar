@@ -12,7 +12,7 @@ class TableBasicsExample extends StatefulWidget {
 }
 
 class _TableBasicsExampleState extends State<TableBasicsExample> {
-  CalendarFormat _calendarFormat = CalendarFormat.month;
+  CalendarFormat _calendarFormat = CalendarFormat.week;
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
 
@@ -23,7 +23,9 @@ class _TableBasicsExampleState extends State<TableBasicsExample> {
         title: Text('TableCalendar - Basics'),
       ),
       body: TableCalendar(
+        showWeekCount: 5,
         firstDay: kFirstDay,
+        locale: 'zh',
         lastDay: kLastDay,
         focusedDay: _focusedDay,
         calendarFormat: _calendarFormat,
